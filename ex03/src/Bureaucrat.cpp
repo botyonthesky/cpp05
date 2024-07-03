@@ -6,7 +6,7 @@
 /*   By: tmaillar <tmaillar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 06:53:29 by tmaillar          #+#    #+#             */
-/*   Updated: 2024/06/28 07:02:29 by tmaillar         ###   ########.fr       */
+/*   Updated: 2024/07/03 14:02:04 by tmaillar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,6 @@ Bureaucrat& Bureaucrat::operator=(const Bureaucrat& other)
     std::cout << "Bureaucrat copy assignment" << std::endl;
     if (this != &other)
     {
-        _name = other._name;
         _grade = other._grade;
     }
     return (*this);

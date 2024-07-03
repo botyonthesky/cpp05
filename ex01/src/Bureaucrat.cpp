@@ -6,33 +6,15 @@
 /*   By: tmaillar <tmaillar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 06:53:29 by tmaillar          #+#    #+#             */
-/*   Updated: 2024/06/26 13:26:05 by tmaillar         ###   ########.fr       */
+/*   Updated: 2024/07/03 13:59:49 by tmaillar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/Bureaucrat.hpp"
 
-Bureaucrat::Bureaucrat()
+Bureaucrat::Bureaucrat() : _name("default"), _grade(150)
 {
     std::cout << "Bureaucrat default constructor" << std::endl;
-}
-
-Bureaucrat::Bureaucrat(const Bureaucrat& other)
-{
-    std::cout << "Bureaucrat copy" << std::endl;
-    _name = other._name;
-    _grade = other._grade;
-}
-
-Bureaucrat& Bureaucrat::operator=(const Bureaucrat& other)
-{
-    std::cout << "Bureaucrat copy assignment" << std::endl;
-    if (this != &other)
-    {
-        _name = other._name;
-        _grade = other._grade;
-    }
-    return (*this);
 }
 
 Bureaucrat::Bureaucrat(const std::string name, int grade) : _name(name), _grade(grade)
@@ -43,7 +25,21 @@ Bureaucrat::Bureaucrat(const std::string name, int grade) : _name(name), _grade(
         throw GradeTooHighException();
     if (grade > 150)
         throw GradeTooLowException();
+}
 
+Bureaucrat::Bureaucrat(const Bureaucrat& other) : _name(other._name), _grade(other._grade)
+{
+    std::cout << "Bureaucrat copy" << std::endl;
+}
+
+Bureaucrat& Bureaucrat::operator=(const Bureaucrat& other)
+{
+    std::cout << "Bureaucrat copy assignment" << std::endl;
+    if (this != &other)
+    {
+        _grade = other._grade;
+    }
+    return (*this);
 }
 
 Bureaucrat::~Bureaucrat()
