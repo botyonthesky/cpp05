@@ -6,7 +6,7 @@
 /*   By: tmaillar <tmaillar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 06:53:19 by tmaillar          #+#    #+#             */
-/*   Updated: 2024/06/28 08:13:21 by tmaillar         ###   ########.fr       */
+/*   Updated: 2024/07/04 11:55:29 by tmaillar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,25 +20,37 @@
 void    presidentialTest(void)
 {
     std::cout << "[ PRESIDENTIAL INTERN TEST ]" << std::endl;
+
+    Intern someRandomIntern;
+    Form* rrf;
+    rrf = someRandomIntern.makeForm("presidential pardon", "Bender");
+    std::cout << *rrf << std::endl;
+    std::cout << std::endl;
+    std::cout << "[ BUREAUCRAT TRY TO EXECUTE INTER FORM ]" << std::endl;
     try
     {
         Bureaucrat b1("John Doe", 1);
-        Bureaucrat b2("Rustin Cohle", 20);
-        Bureaucrat b3("Tyler Durden", 30);
-
-        Intern someRandomIntern;
-        Form* rrf;
-        rrf = someRandomIntern.makeForm("presidential pardon", "Bender");
-        std::cout << *rrf << std::endl;
-        std::cout << std::endl;
+        std::cout << b1 << std::endl;
         b1.executeForm(*rrf);
+        std::cout << std::endl;
+        
+        Bureaucrat b2("Rustin Cohle", 20);
+        std::cout << b2 << std::endl;
         b2.executeForm(*rrf);
+        std::cout << std::endl;
+
+        Bureaucrat b3("Tyler Durden", 30);
+        std::cout << b3 << std::endl;
         b3.executeForm(*rrf);
         std::cout << std::endl;
+        
+        std::cout << std::endl;
+        std::cout << "[ BUREAUCRAT TRY TO SIGN INTER FORM ]" << std::endl;
         b1.signForm(*rrf);
         b2.signForm(*rrf);
         b3.signForm(*rrf);
         std::cout << std::endl;
+        std::cout << "[ BUREAUCRAT RETRY TO EXECUTE INTER FORM ]" << std::endl;
         b1.executeForm(*rrf);
         b2.executeForm(*rrf);
         b3.executeForm(*rrf);
@@ -53,25 +65,36 @@ void    presidentialTest(void)
 void    robotomyTest(void)
 {
     std::cout << "[ ROBOTOMY INTERN TEST ]" << std::endl;
+    Intern someRandomIntern;
+    Form* rrf;
+    rrf = someRandomIntern.makeForm("robotomy request", "Bender");
+    std::cout << *rrf << std::endl;
+    std::cout << std::endl;
+    std::cout << "[ BUREAUCRAT TRY TO EXECUTE INTER FORM ]" << std::endl;
     try
     {
         Bureaucrat b1("R2D2", 30);
-        Bureaucrat b2("Replicant", 45);
-        Bureaucrat b3("T1000", 80);
-        
-        Intern someRandomIntern;
-        Form* rrf;
-        rrf = someRandomIntern.makeForm("robotomy request", "Bender");
-        std::cout << *rrf << std::endl;
-        std::cout << std::endl;
+        std::cout << b1 << std::endl;
         b1.executeForm(*rrf);
+        std::cout << std::endl;
+        
+        Bureaucrat b2("Replicant", 45);
+        std::cout << b2 << std::endl;
         b2.executeForm(*rrf);
+        std::cout << std::endl;
+
+        Bureaucrat b3("T1000", 80);
+        std::cout << b3 << std::endl;
         b3.executeForm(*rrf);
         std::cout << std::endl;
+
+        std::cout << "[ BUREAUCRAT TRY TO SIGN THE INTER FORM ]" << std::endl;
         b1.signForm(*rrf);
         b2.signForm(*rrf);
         b3.signForm(*rrf);
         std::cout << std::endl;
+
+        std::cout << "[ BUREAUCRAT RETRY TO EXECUTE INTER FORM ]" << std::endl;
         b1.executeForm(*rrf);
         b2.executeForm(*rrf);
         b3.executeForm(*rrf);
@@ -87,25 +110,36 @@ void    robotomyTest(void)
 void    shrubberyTest(void)
 {
     std::cout << "[ SHRUBBERY INTERN TEST ]" << std::endl;
+    Intern someRandomIntern;
+    Form* rrf;
+    rrf = someRandomIntern.makeForm("shrubbery creation", "Bender");
+    std::cout << *rrf << std::endl;
+    std::cout << std::endl;
+    std::cout << "[ BUREAUCRAT TRY TO EXECUTE THE INTER FORM ]" << std::endl;
     try
     {
         Bureaucrat b1("Cliff Booth", 1);
-        Bureaucrat b2("Vincent Vega", 120);
-        Bureaucrat b3("Calvin Candie", 137);
-
-        Intern someRandomIntern;
-        Form* rrf;
-        rrf = someRandomIntern.makeForm("shrubbery creation", "Bender");
-        std::cout << *rrf << std::endl;
-        std::cout << std::endl;
+        std::cout << b1 << std::endl;
         b1.executeForm(*rrf);
+        std::cout << std::endl;
+
+        Bureaucrat b2("Vincent Vega", 120);
+        std::cout << b2 << std::endl;
         b2.executeForm(*rrf);
+        std::cout << std::endl;
+
+        Bureaucrat b3("Calvin Candie", 137);
+        std::cout << b3 << std::endl;
         b3.executeForm(*rrf);
         std::cout << std::endl;
+        
+        std::cout << "[ BUREAUCRAT TRY TO SIGN THE INTER FORM ]" << std::endl;
         b1.signForm(*rrf);
         b2.signForm(*rrf);
         b3.signForm(*rrf);
         std::cout << std::endl;
+
+        std::cout << "[ BUREAUCRAT RETRY TO EXECUTE THE INTER FORM ]" << std::endl;
         b1.executeForm(*rrf);
         b2.executeForm(*rrf);
         b3.executeForm(*rrf);

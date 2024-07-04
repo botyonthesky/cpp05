@@ -6,7 +6,7 @@
 /*   By: tmaillar <tmaillar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 06:53:31 by tmaillar          #+#    #+#             */
-/*   Updated: 2024/07/03 13:52:52 by tmaillar         ###   ########.fr       */
+/*   Updated: 2024/07/04 06:55:42 by tmaillar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ class Bureaucrat
 {
     private:
     
-        const std::string     _name;
-        int             _grade;
+        const std::string       _name;
+        int                     _grade;
         
     public:
 
@@ -44,7 +44,6 @@ class Bureaucrat
             public:
                 virtual const char* what() const throw();
         };
-        
     
         std::string     getName(void) const;
         int             getGrade(void) const;

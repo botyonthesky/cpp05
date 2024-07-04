@@ -6,7 +6,7 @@
 /*   By: tmaillar <tmaillar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 11:56:54 by tmaillar          #+#    #+#             */
-/*   Updated: 2024/06/28 06:36:07 by tmaillar         ###   ########.fr       */
+/*   Updated: 2024/07/04 11:19:58 by tmaillar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ ShrubberyCreationForm::~ShrubberyCreationForm()
 {
     std::cout << "Shrubbery destructor" << std::endl;
 }
-bool    ShrubberyCreationForm::checkOutfile(std::ofstream& outfileStream, std::string outfile)
+bool    ShrubberyCreationForm::checkOutfile(std::ofstream& outfileStream, std::string outfile) const
 {
     if (!outfileStream)
     {
@@ -54,9 +54,7 @@ bool    ShrubberyCreationForm::checkOutfile(std::ofstream& outfileStream, std::s
     return (true);
 }
 
-
-
-void    ShrubberyCreationForm::execute(const Bureaucrat& executor)
+void    ShrubberyCreationForm::execute(const Bureaucrat& executor) const
 {
     Form::execute(executor);
     if (executor.getGrade() <= this->getExeGrade())

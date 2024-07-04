@@ -6,13 +6,13 @@
 /*   By: tmaillar <tmaillar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 06:53:29 by tmaillar          #+#    #+#             */
-/*   Updated: 2024/07/03 13:58:54 by tmaillar         ###   ########.fr       */
+/*   Updated: 2024/07/04 07:31:15 by tmaillar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/Bureaucrat.hpp"
 
-Bureaucrat::Bureaucrat() : _name("Default"), _grade(150)
+Bureaucrat::Bureaucrat() : _name("unnamed"), _grade(150)
 {
     std::cout << "Default constructor" << std::endl;
 }

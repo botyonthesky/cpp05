@@ -6,14 +6,14 @@
 /*   By: tmaillar <tmaillar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 07:37:52 by tmaillar          #+#    #+#             */
-/*   Updated: 2024/06/27 14:25:51 by tmaillar         ###   ########.fr       */
+/*   Updated: 2024/07/04 07:05:27 by tmaillar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/Form.hpp"
 #include "../include/Bureaucrat.hpp"
 
-Form::Form() : _name("Undefine"), _signedGrade(150), _exeGrade(150)
+Form::Form() : _name("Default"), _signedGrade(150), _exeGrade(150)
 {
     std::cout << "Form default constructor" << std::endl;
 }

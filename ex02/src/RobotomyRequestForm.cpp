@@ -6,18 +6,18 @@
 /*   By: tmaillar <tmaillar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 11:56:51 by tmaillar          #+#    #+#             */
-/*   Updated: 2024/06/27 11:14:16 by tmaillar         ###   ########.fr       */
+/*   Updated: 2024/07/04 11:17:30 by tmaillar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/RobotomyRequestForm.hpp"
 
 RobotomyRequestForm::RobotomyRequestForm() :
-AForm("Default", 72, 45)
+AForm("unnamed", 72, 45)
 {
     std::cout << "Robotomy default constructor" << std::endl;
 }
-RobotomyRequestForm::RobotomyRequestForm(std::string target) :
+RobotomyRequestForm::RobotomyRequestForm(const std::string target) :
 AForm(target, 72, 45)
 {
     std::cout << "Robotomy constructor" << std::endl;   
@@ -45,13 +45,10 @@ RobotomyRequestForm::~RobotomyRequestForm()
 void    RobotomyRequestForm::execute(const Bureaucrat& executor) const
 {
     AForm::execute(executor);
-    int	success;
-	srand((unsigned) time(NULL));
-	success = rand() % 2;
     if (executor.getGrade() <= this->getExeGrade())
     {
         std::cout << "Drill ! Drill ! !" << std::endl;
-        if (success)
+        if (rand() & 1)
         {
             std::cout << "We inform you that " << getName()
             << " has been robotomized successfully 50% of the time" << std::endl;
@@ -67,7 +64,7 @@ std::ostream&   operator<<(std::ostream& out, RobotomyRequestForm& src)
     out << "Roboty Request Form, name : " << src.getName() << std::endl;
     std::cout << "have a required grade of : "<< src.getSignedGrade() << " to be signed," << std::endl;
     std::cout << "have a required grade of : "<< src.getExeGrade() << " to be executed" << std::endl;
-    std::cout << "actually the Aform is : ";
+    std::cout << "actually the form is : ";
     if (src.getSigned() == true)
         std::cout << " signed";
     else

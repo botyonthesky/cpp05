@@ -6,14 +6,14 @@
 /*   By: tmaillar <tmaillar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 06:53:29 by tmaillar          #+#    #+#             */
-/*   Updated: 2024/07/03 14:00:36 by tmaillar         ###   ########.fr       */
+/*   Updated: 2024/07/04 09:10:13 by tmaillar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/Bureaucrat.hpp"
 #include "../include/AForm.hpp"
 
-Bureaucrat::Bureaucrat() : _name("Default"), _grade(150)
+Bureaucrat::Bureaucrat() : _name("unnamed"), _grade(150)
 {
     std::cout << "Bureaucrat default constructor" << std::endl;
 }
@@ -102,7 +102,7 @@ void            Bureaucrat::signForm(AForm& doc)
     {
         std::cout << "Bureaucrat, name : " << this->_name
         << " couldn't sign form : " << doc.getName()
-        << " because is grade is too low" << std::endl;
+        << ", because his grade is too low !" << std::endl;
     }
 }
 void        Bureaucrat::executeForm(AForm const & form) 
@@ -110,13 +110,13 @@ void        Bureaucrat::executeForm(AForm const & form)
     try
     {
         form.execute(*this);
-        std::cout << "The form : " << form.getName()
-        << " have been successfully executed" << std::endl;
+        std::cout << "Bureaucrat, name : " << this->_name
+        << " executed " << form.getName() << " form." << std::endl;
     }
     catch(const std::exception& e)
     {
-        std::cerr << "The form : " << form.getName()
-        << " couldn't be execute because : "
+        std::cerr << "Bureaucrat, name : " << this->_name
+        << " can't execute " << form.getName() << " form, because : "
         << e.what() << std::endl;
     }
     

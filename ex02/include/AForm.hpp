@@ -17,6 +17,8 @@
 #include <iostream>
 #include <fstream>
 #include <stdexcept>
+#include <ctime>
+#include <cstdlib>
 #include "Bureaucrat.hpp"
 
 class Bureaucrat;
@@ -60,7 +62,7 @@ class AForm
             int                 getSignedGrade(void) const;
             int                 getExeGrade(void) const;
             void                beSigned(const Bureaucrat& staff);
-            void        execute(const Bureaucrat& executor) const;
+            virtual void        execute(Bureaucrat const & executor) const;
     
 };
 

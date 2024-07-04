@@ -60,7 +60,7 @@ class AForm
             int                 getSignedGrade(void) const;
             int                 getExeGrade(void) const;
             void                beSigned(const Bureaucrat& staff);
-            void                execute(const Bureaucrat& executor) const;
+            virtual void                execute(const Bureaucrat& executor) const;
     
 };
 

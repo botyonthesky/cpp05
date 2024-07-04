@@ -6,7 +6,7 @@
 /*   By: tmaillar <tmaillar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 11:56:47 by tmaillar          #+#    #+#             */
-/*   Updated: 2024/06/28 06:32:46 by tmaillar         ###   ########.fr       */
+/*   Updated: 2024/07/04 11:19:04 by tmaillar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,8 @@ class ShrubberyCreationForm : virtual public Form
         ShrubberyCreationForm& operator=(const ShrubberyCreationForm& other);
         ~ShrubberyCreationForm();
 
-        void    execute(const Bureaucrat& executor);
-        bool    checkOutfile(std::ofstream& outfileStreeam, std::string outfile);
+        void    execute(const Bureaucrat& executor) const;
+        bool    checkOutfile(std::ofstream& outfileStreeam, std::string outfile) const;
 
 
 };

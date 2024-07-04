@@ -6,7 +6,7 @@
 /*   By: tmaillar <tmaillar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 11:56:49 by tmaillar          #+#    #+#             */
-/*   Updated: 2024/06/28 06:34:52 by tmaillar         ###   ########.fr       */
+/*   Updated: 2024/07/04 11:39:08 by tmaillar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ void       PresidentialPardonForm::execute(const Bureaucrat& executor) const
     if (executor.getGrade() <= this->getExeGrade())
     {
         std::cout << "We inform you, that : " << this->getName()
-        << "has been pardoned by Zaphod Beeblebrox." << std::endl;
+        << " has been pardoned by Zaphod Beeblebrox." << std::endl;
     }
 }
 

@@ -6,17 +6,18 @@
 /*   By: tmaillar <tmaillar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 11:56:49 by tmaillar          #+#    #+#             */
-/*   Updated: 2024/06/27 10:26:19 by tmaillar         ###   ########.fr       */
+/*   Updated: 2024/07/04 08:47:38 by tmaillar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/PresidentialPardonForm.hpp"
 
-PresidentialPardonForm::PresidentialPardonForm() : AForm("default", 25, 5)
+PresidentialPardonForm::PresidentialPardonForm() :
+AForm("unnamed", 25, 5)
 {
     std::cout << "Presidential default constructor" << std::endl;
 }
-PresidentialPardonForm::PresidentialPardonForm(std::string target) : AForm(target, 25, 5)
+PresidentialPardonForm::PresidentialPardonForm(const std::string target) : AForm(target, 25, 5)
 {
     std::cout << "Presidential constructor" << std::endl;
 }
@@ -57,7 +58,7 @@ std::ostream&   operator<<(std::ostream& out, PresidentialPardonForm& src)
     out << "Presidential Pardon Form, name : " << src.getName() << std::endl;
     std::cout << "have a required grade of : "<< src.getSignedGrade() << " to be signed," << std::endl;
     std::cout << "have a required grade of : "<< src.getExeGrade() << " to be executed" << std::endl;
-    std::cout << "actually the Aform is : ";
+    std::cout << "actually the form is : ";
     if (src.getSigned() == true)
         std::cout << " signed";
     else

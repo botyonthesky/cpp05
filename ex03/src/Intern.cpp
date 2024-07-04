@@ -31,6 +31,7 @@ Intern::Intern(const Intern& other)
 
 Intern&  Intern::operator=(const Intern& other)
 {
+    std::cout << "Intern copy assignment" << std::endl;
     if (this != &other)
         *this = other;
     return (*this);
@@ -122,15 +123,5 @@ Form*  Intern::makeForm(std::string name, std::string target)
         std::cerr << e.what() << '\n';
     }
     throw InvalidTarget();
-    // for (int i = 0; i < 3; i++)
-    // {
-    //     if (name == call[i])
-    //     {
-    //         newForm = (this->*ptr[i])(target);
-    //         std::cout << "Intern creates : " << call[i] << std::endl;
-    //         return (newForm);
-    //     }
-
-    // }
    return (NULL);
 }

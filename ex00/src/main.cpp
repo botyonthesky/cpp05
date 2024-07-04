@@ -6,7 +6,7 @@
 /*   By: tmaillar <tmaillar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 06:53:19 by tmaillar          #+#    #+#             */
-/*   Updated: 2024/06/26 13:20:48 by tmaillar         ###   ########.fr       */
+/*   Updated: 2024/07/04 07:34:32 by tmaillar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,13 @@ void        classicTest(void)
     std::cout << "[ CLASSIC TEST ]" << std::endl;
     try
     {
-        Bureaucrat b1("John Doe", 1);
+        Bureaucrat b1("Tyler Durden", 1);
         Bureaucrat b2(b1);
         Bureaucrat b3;
-        b3 = b1;
 
+        std::cout << b3 << std::endl;
+        b3 = b1;
+        
         std::cout << b1 << std::endl;
         std::cout << b2 << std::endl;
         std::cout << b3 << std::endl;
@@ -38,7 +40,7 @@ void        gradeTest(void)
     std::cout << "[ GRADE TEST ]" << std::endl;
     try
     {
-        Bureaucrat b1("John Doe", 0);
+        Bureaucrat b1("Tyler Durden", 0);
         std::cout << b1 << std::endl;
     }
     catch (const std::exception& e)
@@ -48,7 +50,7 @@ void        gradeTest(void)
     std::cout << std::endl;
     try 
     {
-        Bureaucrat b2("Reggie Ledoux", 151);
+        Bureaucrat b2("Cornelius", 151);
         std::cout << b2 << std::endl;
     }
     catch (const std::exception& e) 
@@ -58,7 +60,7 @@ void        gradeTest(void)
     std::cout << std::endl;
     try 
     {
-        Bureaucrat b3("Rustin Cohle", 75);
+        Bureaucrat b3("Tyler Durden", 75);
         std::cout << b3 << std::endl;
     }
     catch (const std::exception& e)
@@ -72,7 +74,7 @@ void    incrementTest(void)
     std::cout << "[ INCREMENT TEST ]" << std::endl;
     try
     {
-        Bureaucrat b1("John Doe", 2);
+        Bureaucrat b1("Tyler Durden", 2);
         std::cout << b1 << std::endl;
         b1.incrementGrade();
         std::cout << b1 << std::endl;
@@ -90,7 +92,7 @@ void    decrementTest(void)
     std::cout << "[ DECREMENT TEST ]" << std::endl;
     try
     {
-        Bureaucrat b1("John Doe", 149);
+        Bureaucrat b1("Tyler Durden", 149);
         std::cout << b1 << std::endl;
         b1.decrementGrade();
         std::cout << b1 << std::endl;

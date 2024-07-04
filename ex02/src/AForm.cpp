@@ -13,7 +13,7 @@
 #include "../include/AForm.hpp"
 #include "../include/Bureaucrat.hpp"
 
-AForm::AForm() : _name("Default"), _signedGrade(150), _exeGrade(150)
+AForm::AForm() : _name("unnamed"), _signedGrade(150), _exeGrade(150)
 {
     std::cout << "AForm default constructor" << std::endl;
 }
@@ -64,20 +64,20 @@ const char* AForm::FormNotSigned::what() const throw()
     return ("The form is not signed");
 }
 
-std::string       AForm::getName(void) const
+std::string         AForm::getName(void) const
 {
     return (_name);
 }
 
-bool                    AForm::getSigned(void) const
+bool                AForm::getSigned(void) const
 {
     return (_signed);
 }
-int               AForm::getSignedGrade(void) const
+int                 AForm::getSignedGrade(void) const
 {
     return (_signedGrade);
 }
-int               AForm::getExeGrade(void) const
+int                 AForm::getExeGrade(void) const
 {
     return (_exeGrade);
 }
@@ -98,7 +98,7 @@ void                AForm::beSigned(const Bureaucrat& staff)
         }            
     }
 }
-void        AForm::execute(const Bureaucrat& executor) const
+void        AForm::execute(Bureaucrat const & executor) const
 {
     if (this->_signed == false)
         throw FormNotSigned();

@@ -6,7 +6,7 @@
 /*   By: tmaillar <tmaillar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 07:34:36 by tmaillar          #+#    #+#             */
-/*   Updated: 2024/06/28 07:17:06 by tmaillar         ###   ########.fr       */
+/*   Updated: 2024/07/04 11:20:58 by tmaillar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ class Form
             int                 getSignedGrade(void) const;
             int                 getExeGrade(void) const;
             void                beSigned(const Bureaucrat& staff);
-            void                execute(const Bureaucrat& executor) const;
+            virtual void                execute(const Bureaucrat& executor) const;
             
 };
 
