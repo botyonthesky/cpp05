@@ -6,7 +6,7 @@
 /*   By: tmaillar <tmaillar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 07:37:52 by tmaillar          #+#    #+#             */
-/*   Updated: 2024/07/04 07:05:27 by tmaillar         ###   ########.fr       */
+/*   Updated: 2024/07/04 13:05:37 by tmaillar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,18 +15,18 @@
 
 Form::Form() : _name("Default"), _signedGrade(150), _exeGrade(150)
 {
+    _signed = false;
     std::cout << "Form default constructor" << std::endl;
 }
 
 Form::Form(const std::string name, const int signedGrade, const int exeGrade) :
 _name(name), _signedGrade(signedGrade), _exeGrade(exeGrade)
 {
-    std::cout << "Form constructor" << std::endl;
+    std::cout << "Form, name : " << _name << " constructor" << std::endl;
     if (signedGrade < 1 || exeGrade < 1)
         throw GradeTooHighException();
     if (signedGrade > 150 || exeGrade > 150)
         throw GradeTooLowException();
-    
     _signed = false;
 }
 Form::Form(const Form& other) :
@@ -48,7 +48,7 @@ Form& Form::operator=(const Form& other)
 
 Form::~Form()
 {
-    std::cout << "Form destructor" << std::endl;
+    std::cout << "Form, name : " << _name << " destructor" << std::endl;
 }
 
 const char* Form::GradeTooLowException::what() const throw()
@@ -61,7 +61,7 @@ const char* Form::GradeTooHighException::what() const throw()
     return ("The grade is too high");
 }
 
-std::string       Form::getName(void) const
+const std::string       Form::getName(void) const
 {
     return (_name);
 }

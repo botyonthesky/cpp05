@@ -6,7 +6,7 @@
 /*   By: tmaillar <tmaillar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 07:34:36 by tmaillar          #+#    #+#             */
-/*   Updated: 2024/06/26 14:02:40 by tmaillar         ###   ########.fr       */
+/*   Updated: 2024/07/04 13:00:15 by tmaillar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,11 +49,11 @@ class Form
                     virtual const char* what() const throw();  
             };
 
-            std::string         getName(void) const;
-            bool                getSigned(void) const;
-            int                 getSignedGrade(void) const;
-            int                 getExeGrade(void) const;
-            void                beSigned(const Bureaucrat& staff);
+            const std::string       getName(void) const;
+            bool                    getSigned(void) const;
+            int                     getSignedGrade(void) const;
+            int                     getExeGrade(void) const;
+            void                    beSigned(const Bureaucrat& staff);
     
 };
 

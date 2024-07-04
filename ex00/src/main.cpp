@@ -6,7 +6,7 @@
 /*   By: tmaillar <tmaillar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 06:53:19 by tmaillar          #+#    #+#             */
-/*   Updated: 2024/07/04 07:34:32 by tmaillar         ###   ########.fr       */
+/*   Updated: 2024/07/04 12:58:06 by tmaillar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,14 @@ void        classicTest(void)
     try
     {
         Bureaucrat b1("Tyler Durden", 1);
-        Bureaucrat b2(b1);
-        Bureaucrat b3;
+        std::cout << b1 << std::endl;
 
+        Bureaucrat b2(b1);
+        std::cout << b2 << std::endl;
+
+        Bureaucrat b3;
         std::cout << b3 << std::endl;
         b3 = b1;
-        
-        std::cout << b1 << std::endl;
-        std::cout << b2 << std::endl;
         std::cout << b3 << std::endl;
     }
     catch (const std::exception& e)

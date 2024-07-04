@@ -6,7 +6,7 @@
 /*   By: tmaillar <tmaillar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 06:53:29 by tmaillar          #+#    #+#             */
-/*   Updated: 2024/07/04 07:31:03 by tmaillar         ###   ########.fr       */
+/*   Updated: 2024/07/04 13:02:43 by tmaillar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ Bureaucrat::Bureaucrat() : _name("unnamed"), _grade(150)
 
 Bureaucrat::Bureaucrat(const std::string name, int grade) : _name(name), _grade(grade)
 {
-    std::cout << "Bureaucrat constructor" << std::endl;
+    std::cout << "Bureaucrat, name : " << _name << " constructor" << std::endl;
 
     if (grade < 1)
         throw GradeTooHighException();
@@ -44,7 +44,7 @@ Bureaucrat& Bureaucrat::operator=(const Bureaucrat& other)
 
 Bureaucrat::~Bureaucrat()
 {
-    std::cout << "Bureaucrat destructor" << std::endl;
+    std::cout << "Bureaucrat, name : " << _name << " destructor" << std::endl;
 }
 
 const char* Bureaucrat::GradeTooLowException::what() const throw()
@@ -75,12 +75,12 @@ void            Bureaucrat::decrementGrade(void)
         throw GradeTooLowException();
 }
 
-std::string     Bureaucrat::getName(void) const
+const std::string       Bureaucrat::getName(void) const
 {
     return (_name);
 }
 
-int             Bureaucrat::getGrade(void) const
+int                     Bureaucrat::getGrade(void) const
 {
     return (_grade);
 }
@@ -97,7 +97,7 @@ void            Bureaucrat::signForm(Form& doc)
     {
         std::cout << "Bureaucrat, name : " << this->_name
         << " couldn't sign form : " << doc.getName()
-        << " because is grade is too low" << std::endl;
+        << " because : " << e.what() << std::endl;
     }
 }
 

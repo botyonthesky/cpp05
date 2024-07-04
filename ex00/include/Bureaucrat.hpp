@@ -6,7 +6,7 @@
 /*   By: tmaillar <tmaillar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 06:53:31 by tmaillar          #+#    #+#             */
-/*   Updated: 2024/07/04 06:55:42 by tmaillar         ###   ########.fr       */
+/*   Updated: 2024/07/04 12:44:31 by tmaillar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ class Bureaucrat
                 virtual const char* what() const throw();
         };
     
-        std::string     getName(void) const;
+        const std::string     getName(void) const;
         int             getGrade(void) const;
         void            incrementGrade();
         void            decrementGrade();
